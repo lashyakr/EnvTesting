@@ -6,8 +6,9 @@ on:
       - staging
 
 jobs:
-  print-secret:
+  deploy-staging-print-secret:
     runs-on: ubuntu-latest
+    environment: Staging
 
     steps:
       - name: Checkout code
