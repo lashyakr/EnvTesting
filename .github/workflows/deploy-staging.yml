@@ -13,8 +13,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        
+      - name: Debug - List environment variables
+        run: printenv
 
       - name: Print secret
         run: |
           echo "Test Secret is ${{ secrets.SERVER }}"
           echo "Variable env IS ${{ env.USERNAME }}" 
+
+      - name: Print secret and variable
+        run: |
+          echo "Test Secret is [SECRET REDACTED]"
+          echo "Variable env IS ${{ env.USERNAME }}"
