@@ -10,6 +10,9 @@ on:
 jobs:
   print-secret:
     runs-on: ubuntu-latest
+    environment: Master
+    env:
+      USERNAME: ${{ vars.USERNAME }}
 
     steps:
       - name: Checkout code
@@ -17,5 +20,5 @@ jobs:
 
       - name: Print secret
         run: |
-          echo "Secret is ${{ secrets.SERVER }}" |
+          echo "Secret is ${{ secrets.SERVER }}"
           echo "Test completed. $USERNAME"
