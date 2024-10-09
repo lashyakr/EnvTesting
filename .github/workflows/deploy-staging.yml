@@ -15,5 +15,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Print secret
-        run: echo "Test Secret is ${{ secrets.SERVER }}" |
+        run: |
+          echo "Test Secret is ${{ secrets.SERVER }}"
           echo "Variable env IS $USERNAME"
