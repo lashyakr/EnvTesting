@@ -1,0 +1,22 @@
+name: Staging Pipeline
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  deploy-staging-print-secret:
+    runs-on: ubuntu-latest
+    environment: Staging
+    env:
+      USERNAME: ${{ vars.USERNAME }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Print secret and variable
+        run: |
+          echo "Test Secret is [SECRET REDACTED]"
+          echo "Variable env IS $USERNAME"
