@@ -15,7 +15,12 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Debug - List environment variables
-        run: printenv
+        run: printenv   
+
+      - name: Debug - List environment variables
+        run: |
+          printenv | sort
+          echo "USERNAME from env: ${{ env.USERNAME }}"
 
       - name: Print secret and variable
         run: |
