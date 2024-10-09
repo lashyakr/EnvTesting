@@ -9,6 +9,8 @@ jobs:
   deploy-staging-print-secret:
     runs-on: ubuntu-latest
     environment: Staging
+    env:
+      USERNAME: ${{ vars.USERNAME }}
 
     steps:
       - name: Checkout code
