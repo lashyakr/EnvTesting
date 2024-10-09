@@ -1,13 +1,19 @@
 name: Master CI/CD Pipeline
 
 on:
-  pull_request:
+  push:
     branches:
-      - staging
+      - master
+    paths-ignore:
+      - '**/staging/**'
 
 jobs:
   print-secret:
     runs-on: ubuntu-latest
+    environment: Master
+    if: github.event.before == 'refs/heads/staging'
+    env:
+      USERNAME: ${{ vars.USERNAME }}
 
     steps:
       - name: Checkout code
@@ -15,5 +21,5 @@ jobs:
 
       - name: Print secret
         run: |
-          echo "Secret is ${{ secrets.SERVER }}" |
+          echo "Secret is ${{ secrets.SERVER }}"
           echo "Test completed. $USERNAME"
