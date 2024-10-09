@@ -20,4 +20,4 @@ jobs:
       - name: Print secret and variable
         run: |
           echo "Test Secret is [SECRET REDACTED]"
-          echo "Variable env IS ${{ env.USERNAME }}"
+          echo "Variable env IS $USERNAME"
