@@ -1,9 +1,10 @@
 name: Master CI/CD Pipeline
 
 on:
-  push:
+  pull_request:
     branches:
       - master
+    types: [closed]
     paths-ignore:
       - '**/staging/**'
 
@@ -11,7 +12,7 @@ jobs:
   print-secret:
     runs-on: ubuntu-latest
     environment: Master
-    if: github.event.before == 'refs/heads/staging'
+    if: github.event.before == 'refs/heads/staging' && github.event.pull_request.merged == true
     env:
       USERNAME: ${{ vars.USERNAME }}
 
