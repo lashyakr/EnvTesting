@@ -17,4 +17,4 @@ jobs:
       - name: Print secret
         run: |
           echo "Test Secret is ${{ secrets.SERVER }}"
-          echo "Variable env IS $USERNAME"
+          echo "Variable env IS ${{ env.USERNAME }}" 
