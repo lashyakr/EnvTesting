@@ -12,14 +12,14 @@ Test bold - **Bold**
 ### Developer Guidelines
 Please follow these steps to ensure a smooth workflow and maintain code quality:
 1. Clone the Repository
-  - Clone the repository to your local machine.
+    - Clone the repository to your local machine.
 2. Make code changes
-- Implement the feature by following the Project coding standards to maintain the consistency across the project.
-- Make sure the functionality is thoroughly tested to ensure it works as expected.
+    - Implement the feature by following the Project coding standards to maintain the consistency across the project.
+    - Make sure the functionality is thoroughly tested to ensure it works as expected.
 3. Commit the changes
-- Commit changes with clear, concise commit messages that explain the purpose of the change.
+    - Commit changes with clear, concise commit messages that explain the purpose of the change.
 4. Push the changes:
-- Push your code changes to the main branch. 
+    - Push your code changes to the main branch. 
         
 
 
